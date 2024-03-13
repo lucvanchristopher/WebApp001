@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using WebApp001.Models;
 
 namespace WebApp001.Data
 {
@@ -9,5 +10,8 @@ namespace WebApp001.Data
             : base(options)
         {
         }
+        public DbSet<Fruit> Fruit { get; set; } = default!;
+
+        public DbSet<Image> Images { get; set; } = default!;
     }
 }
